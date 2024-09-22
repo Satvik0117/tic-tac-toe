@@ -100,7 +100,7 @@ function Board({ gridSize }) {
 
 	return (
 		<>
-			<div className="board-container">
+			<div style={{ "--gridSize": gridSize }} className="board-container">
 				{getGrid().map((boxPosition, index) => {
 					return (
 						<Box

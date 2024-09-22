@@ -1,17 +1,23 @@
 body {
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+:root {
+	--gridSize: 3;
+}
+
 .board-container {
-	width: 300px;
-	height: 300px;
+	width: calc(var(--gridSize) * 100px);
+	height: calc(var(--gridSize) * 100px);
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	grid-template-rows: repeat(3, 1fr);
+	grid-template-columns: repeat(var(--gridSize), 1fr);
+	grid-template-rows: repeat(var(--gridSize), 1fr);
 }
 
 .box {
 	border: 1px solid #000;
 	width: 100px;
+	height: 100px;
 	cursor: pointer;
 	text-align: center;
 }
